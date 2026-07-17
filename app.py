@@ -22,7 +22,8 @@ st.write("Téléchargez la photo d'un cours ou d'un document, et l'IA va génér
 num_questions = st.slider("Nombre de questions à générer :", min_value=1, max_value=10, value=3)
 
 # --- ZONE D'IMPORTATION DE L'IMAGE ---
-uploaded_file = st.file_uploader("Choisissez une image...", type=["jpg", "jpeg", "png"])
+uploaded_file =st.file_uploader("Choisissez une image...", type=["jpg", "png"], accept_multiple_files=True)
+
 
 if uploaded_file is not None:
     # Affichage de l'image importée
